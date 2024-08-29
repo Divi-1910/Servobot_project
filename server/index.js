@@ -33,6 +33,7 @@ clearChatHistory();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(path.join(__dirname, "public")));
+
 const messageRoutes = require("./routes/messageRoutes");
 app.use("/api", messageRoutes);
 app.listen(port, () => {
